@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<title>IoT Details</title>
+
+<head>
+  <title>Main Testing Page</title>
+  <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("https://mediapool.bmwgroup.com/cache/P9/202202/P90450623/P90450623-bmw-super-bowl-spot-2022-2396px.jpg");
+      min-height: 75%;
+    }
+
+
+.column {
+  float: left;
+  width: 32%;
+  padding: 10px;
+  height: 350px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  </style>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div>
+  <a href="login.html">LOGOUT</a>
+</div>
+
+
+
+<div class="row">
+  <div class="column">
+    <div id="Dashboard">
+      <h2>DASHBOARD</h2>
+    </div>
+    <section>
+      <div><span id="carSpeed">0</span> MPH<br>Speed</div>
+      <div><span id="rpm">0</span> RPM<br>RPM</div>
+      <div><span id="batteryLevel">0</span> %<br>Battery Level</div>
+      <div><span id="batteryTemp">0</span> °F<br>Battery Temperature</div>
+      <div><span id="calcSpeed">0</span> MPH<br>Speed from RPM</div>
+    </section>
+  </div>
+
+  <div class="column">
+    <div id="driveMode">
+      <h2>DRIVING MODE</h2>
+    </div>
+    <section>
+      <div></div>
+      <span id="drivingMode">Driver Assisted</span></div>
+    </section>
+    <div id="Climate">
+      <h2>CLIMATE CONDITIONS</h2>
+    </div>
+    <section>
+      <div><span id="internalTemp">0</span> °F<br>Internal Temperature</div>
+      <div><span id="externalTemp">0</span> °F<br>External Temperature</div>
+      <div><span id="windSpeed">0</span> MPH<br>Wind Speed</div>
+      <div><span id="humidity">0</span> %<br>Humidity</div>
+      <div><span id="visibility">0</span> %<br>Visibility</div>
+    </section>
+    <div style="margin: 3rem" >
+      <span id="tractAlert"
+        style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Traction
+        Status: --</span>
+    </div>
+    <div style="margin: 3rem" >
+      <span id="tempAlert"
+        style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Temperature
+        Status: --</span>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="column">
+  <div id="CollisionPrediction">
+    <h2>COLLISION PREDICTION</h2>
+  </div>
+  <section>
+    <div><span id="frontDistance">20</span> ft<br>Front Proximity</div>
+    <div><span id="rearDistance">20</span> ft<br>Rear Proximity</div>
+    <div><span id="blindSpot">No</span> <br>Blindspot</div>
+  </section>
+  <div style="margin: 3rem" >
+    <span id="objectAlert"
+      style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Object
+      Status: --</span>
+  </div>
+  <div style="margin: 3rem" >
+    <span id="blindAlert"
+      style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">BlindSpot
+      Status: --</span>
+  </div>
+  <div style="margin: 3rem" >
+    <span id="speedingAlert"
+      style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Speed
+      Status: --</span>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class"column">
+  <div id="CruiseControl">
+      <h2>CRUISE CONTROL</h2>
+    </div>
+    <section>
+      <div><span id="startingSpeed">60</span> MPH<br>Starting Speed</div>
+      <div><span id="cruisingSpeed">65</span> MPH<br>Cruising Speed</div>
+      <div><span id="cruiseControlStatus">Yes</span><br>Cruise Control On</div>
+    </section>
+    <div style="margin: 3rem" >
+      <span id="cruiseAlert"
+        style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Cruise
+        Status: --</span>
+    </div>
+  </div>
+
+  <div class ="column">
+    <div id="LaneMitigation">
+      <h2>LANE MITIGATION</h2>
+    </div>
+    <section>
+      <div>><span id="distanceLeftLine">20</span> in<br>Distance from Left Line</div>
+      <div><span id="distanceRightLine">20</span> in<br>Distance from Right Line</div>
+    </section>
+    <div style="margin: 3rem" >
+      <span id="driftAlert"
+        style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Drifting
+        Status: --</span>
+    </div>
+  </div>
+
+  <div class="column">
+    <div id="SignRecognition">
+      <h2>TRAFFIC LIGHT AND SIGN RECOGNITION</h2>
+    </div>
+    <section>
+      <div><span id="whatSign">Red Light</span><br>Traffic Signal</div>
+    </section>
+    <br>
+
+    <div style="margin: 3rem" >
+      <span id="signAlert"
+        style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Sign
+        Status: --</span>
+    </div>
+  </div>
+</div>
+
+  <div class="-center" style="padding-bottom:15px;">
+    <button type="submit" onclick="getRandInput()" class="nicebutton"> TESTING </button>
+  </div>
+
+
+<!-- STYSTEM LOGS SECTION -->
+<div>
+  <h2>SYSTEM LOGS</h2>
+  <table id="Logs" class="syslogs">
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Speed</th>
+      <th>RPM</th>
+      <th>Bat. Temp.</th>
+      <th>Bat. Level</th>
+      <th>Int. Temp</th>
+      <th>Ext. Temp</th>
+      <th>Wind Speed</th>
+      <th>Humidity</th>
+      <th>Fog Visibility</th>
+      <th>Front Prox.</th>
+      <th>Rear Prox.</th>
+      <th>Blind Spot?</th>
+      <th>CC Start Speed</th>
+      <th>CC Speed</th>
+      <th>CC On?</th>
+      <th>Left Line Dist.</th>
+      <th>Right Line Dist.</th>
+      <th>Sign?</th>
+      <th>Conductor</th>
+    </tr>
+    <tr>
+      <td>MM-DD-YYYY</td>
+      <td>HH:MM:SS</td>
+      <td>MPH</td>
+      <td>RPM</td>
+      <td>°F</td>
+      <td>%</td>
+      <td>°F</td>
+      <td>°F</td>
+      <td>MPH</td>
+      <td>%</td>
+      <td>%</td>
+      <td>ft</td>
+      <td>ft</td>
+      <td>T/F</td>
+      <td>MPH</td>
+      <td>MPH</td>
+      <td>T/F</td>
+      <td>in</td>
+      <td>in</td>
+      <td>Sign</td>
+      <td>Mechanic</td>
+    </tr>
+  </table>
+  <br>
+</div>
+</div>
+<footer>
+  Drive Smarter, with ALSET
+</footer>
+</body>
+
+</html>

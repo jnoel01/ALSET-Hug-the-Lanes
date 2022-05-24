@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Log In Page</title>
+  <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("https://mediapool.bmwgroup.com/cache/P9/202202/P90450623/P90450623-bmw-super-bowl-spot-2022-2396px.jpg");
+      min-height: 75%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Links (sit on top) -->
+  <div class="-top">
+    <div class="-row -padding -black">
+      <div class="-col s3">
+        <a href="#" class="-button -block -black">LOG IN</a>
+      </div>
+      <div class="-col s3">
+        <a href="#about" class="-button -block -black">ABOUT</a>
+      </div>
+      <div class="-col s3">
+        <a href="#troubleshoot" class="-button -block -black">TROUBLESHOOT</a>
+      </div>
+      <div class="-col s3"> </div>
+    </div>
+  </div>
+
+
+
+  <header class="bgimg -display-container -grayscale-min" id="home">
+    <div class="-display-bottomleft -center -padding-large -hide-small">
+      <span class="-tag">Drive Smarter, with ALSET.</span>
+    </div>
+    <div class="-display-middle -center">
+      <form name="login" style="font-size: 25px;">
+        <h3>ALSET Log In</h3>
+
+        <label for="username" style="padding-bottom:10px;"></label>
+        <input type="text" placeholder="username" id="username" name="userid">
+        <br>
+        <label for="password"></label>
+        <input type="password" placeholder="Password" id="password" name="password">
+
+        <div>
+          <button type="reset" onclick="check(this.form)"> Login </button>
+        </div>
+      </form>
+    </div>
+  </header>
+
+
+
+  <div class="-sand -grayscale -large">
+
+
+
+    <div class="-container" id="about">
+      <div class="-content" style="max-width:700px">
+        <h5 class="-center -padding-64"><span class="-tag -wide">ABOUT</span></h5>
+        <p>Currently, there are 38,000 fatalities caused by automobile accidents per year in the United States (ASIRT). In
+        addition, road crashes are the leading cause of death for people aged 1-54. This project will address this problem by
+        presenting a mission critical real-time embedded system. This system relies on the Internet of Things as the most
+        advanced architecture for the products presented in this document.</p>
+        <p>Our goal is to assist the Alset “Hug the Lanes” project in its pursuit of making cars safer, less costly, and more
+        efficient by leveraging Internet of Things technology. We will do this by implementing autonomous driving software into
+        a line of fully electric, high performance vehicles. The result will be a driving experience that is more safe,
+        efficient, and sustainable than the gas powered vehicles on the road today. The nature of the project is a mission
+        critical real-time embedded system.</p>
+        <div class="-panel -leftbar -light-grey">
+          <p><i>Our team is committed to manufacturing the software for Alset in the most appropriate and efficient manner. After
+          speaking to the stakeholders we will create commitments that will go through a software development process that
+          outlines the project's scope, timeline, risks and other formal requirements. Our team constantly seeks to find the best
+          methods to deliver quality products which is why we provide our stakeholders with quality assessments and help product
+          owners understand the risks.</i></p>
+          <p>-Jessica Noel, Jack Chen, Sophia Roper</p>
+        </div>
+      </div>
+
+
+
+      <div class="-container" id="troubleshoot" style="padding-bottom:30px;">
+
+        <p><strong>TroubleShoot Services</strong></p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="-input -padding-16 -border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="-input -padding-16 -border" type="text" placeholder="Message \ Special requirements"
+              required name="Message"></p>
+          <p><button class="-button -black" type="submit">SEND MESSAGE</button></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
